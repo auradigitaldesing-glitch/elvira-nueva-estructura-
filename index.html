@@ -715,17 +715,63 @@
       .nav-links{ display:none; }
       .hamburger{ display:inline-flex; align-items:center; justify-content:center; }
       .brand{ min-width: unset; }
-      .nav-cta{ min-width: unset; }
-      .hero{ min-height: unset; padding: 56px 0 26px; }
-      h1{ max-width: 16ch; }
-      .section-head{ align-items:flex-start; flex-direction:column; }
-      .section-actions{ justify-content:flex-start; }
+      .nav-cta{ min-width: unset; gap: 8px; }
+      .nav{ padding: 12px 14px; gap: 10px; }
+      .icon-pill{ width: 36px; height: 36px; }
+      .btn{ padding: 10px 14px; font-size: 13px; }
+      .hero{ min-height: unset; padding: 40px 0 24px; }
+      .hero-inner{ padding: 24px 0 0; }
+      h1{ max-width: 100%; font-size: clamp(36px, 8vw, 64px); }
+      .sub{ font-size: 14px; padding: 0 12px; }
+      .hero-actions{ gap: 10px; margin-top: 18px; }
+      .btn{ width: 100%; justify-content: center; }
+      .pill-row{ margin-top: 16px; gap: 8px; }
+      .mini-pill{ font-size: 11px; padding: 6px 10px; }
+      .section-head{ align-items:flex-start; flex-direction:column; gap: 12px; }
+      .section-actions{ justify-content:flex-start; width: 100%; }
+      .section-actions .btn{ width: auto; }
       .service-row{ grid-template-columns: 1fr; }
-      .service-right{ border-left: none; border-top: 1px solid rgba(163,166,165,.14); min-height: 190px; }
+      .service-left{ padding: 20px; }
+      .service-right{ border-left: none; border-top: 1px solid rgba(163,166,165,.14); min-height: 180px; }
       .who-inner{ grid-template-columns: 1fr; }
-      .who-right{ border-left: none; border-top: 1px solid rgba(2,2,2,.10); min-height: 280px; }
-      .footer-inner{ flex-direction:column; align-items:flex-start; }
-      .social{ justify-content:flex-start; }
+      .who-left{ padding: 24px 20px; }
+      .who-right{ border-left: none; border-top: 1px solid rgba(2,2,2,.10); min-height: 240px; }
+      .who-title{ font-size: clamp(28px, 6vw, 48px); }
+      .who-text{ font-size: 14px; }
+      .who-item{ grid-template-columns: 32px 1fr; gap: 12px; }
+      .who-icon{ width: 32px; height: 32px; font-size: 14px; }
+      .service-grid{ gap: 14px; }
+      .service-title{ font-size: 20px; }
+      .service-text{ font-size: 13px; }
+      .chip-row{ gap: 8px; }
+      .chip{ font-size: 11px; padding: 6px 10px; }
+      .footer-inner{ flex-direction:column; align-items:flex-start; gap: 16px; }
+      .social{ justify-content:flex-start; width: 100%; }
+      .footer-bottom{ flex-direction: column; align-items: flex-start; gap: 8px; }
+      .wrap{ width: calc(100% - 32px); }
+      section{ padding: 40px 0; }
+    }
+
+    @media (max-width: 480px){
+      .nav{ padding: 10px 12px; }
+      .logo{ width: 28px; height: 28px; }
+      .brand b{ font-size: 13px; }
+      .icon-pill{ width: 32px; height: 32px; }
+      .icon-pill svg{ width: 16px; height: 16px; }
+      .btn{ padding: 10px 12px; font-size: 12px; }
+      .hamburger{ width: 38px; height: 38px; }
+      h1{ font-size: clamp(32px, 10vw, 56px); line-height: 1; }
+      .kicker{ font-size: 11px; padding: 6px 12px; }
+      .sub{ font-size: 13px; line-height: 1.6; }
+      .hero-actions{ flex-direction: column; }
+      .btn{ width: 100%; }
+      .service-left{ padding: 18px; }
+      .service-title{ font-size: 18px; }
+      .glass-card{ padding: 24px 20px; }
+      .glass-card h2{ font-size: clamp(22px, 6vw, 36px); }
+      .who-left{ padding: 20px 18px; }
+      .section-title{ font-size: clamp(24px, 6vw, 40px); }
+      .section-desc{ font-size: 13px; }
     }
 
     .mobile-menu{
