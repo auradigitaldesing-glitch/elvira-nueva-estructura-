@@ -392,14 +392,23 @@
       background-repeat: no-repeat;
     }
     
-    /* Ajuste específico para hero de cursos */
+    /* Ajuste específico para hero de cursos - imagen más pequeña para ver persona completa */
     .hero .section-bg-image{
+      background-size: 80% !important;
       background-position: 60% center;
     }
     
     @media (max-width: 768px){
       .hero .section-bg-image{
+        background-size: 90% !important;
         background-position: 50% center;
+      }
+    }
+    
+    @media (max-width: 480px){
+      .hero .section-bg-image{
+        background-size: 100% !important;
+        background-position: center center;
       }
     }
     .section-bg-overlay{
@@ -1064,7 +1073,7 @@
   <!-- HERO (sin cambios) -->
   <header class="hero">
     <!-- Fondo del hero con imagen Hero_cursos.jpg -->
-    <div class="section-bg section-bg-image" style="background-image: url('./assets/Imagenes/Hero_cursos.jpg'); background-size: cover; background-position: 60% center; background-repeat: no-repeat;">
+    <div class="section-bg section-bg-image" style="background-image: url('./assets/Imagenes/Hero_cursos.jpg'); background-size: 80%; background-position: 60% center; background-repeat: no-repeat;">
       <div class="section-bg-overlay"></div>
     </div>
     <div class="wrap">
