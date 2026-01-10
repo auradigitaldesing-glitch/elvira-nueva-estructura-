@@ -277,6 +277,8 @@
       justify-content:center;
       text-align:center;
       padding: 42px 0 0;
+      position: relative;
+      z-index: 2;
     }
     .kicker{
       display:inline-flex;
@@ -357,12 +359,15 @@
     }
     
     /* Estilos para fondos por sección */
-    section .section-bg{
+    section .section-bg,
+    .hero .section-bg{
       position: absolute;
       inset: 0;
       z-index: -1;
       pointer-events: none;
       overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
     
     /* Ejemplos de fondos para secciones */
@@ -389,6 +394,19 @@
       position: absolute;
       inset: 0;
       background: rgba(254,251,249,.85);
+    }
+    
+    /* Overlay para hero con imagen - muy sutil para que se vea bien la imagen */
+    .hero .section-bg-overlay{
+      background: linear-gradient(180deg, rgba(254,251,249,.15), rgba(248,244,240,.20));
+    }
+    
+    /* Asegurar que el contenido del hero tenga buen contraste sobre la imagen */
+    .hero h1,
+    .hero .sub,
+    .hero .kicker,
+    .hero .btn{
+      text-shadow: 0 2px 8px rgba(0,0,0,.15);
     }
 
     /* ===== SECTION HEAD ===== */
@@ -1033,8 +1051,10 @@
 
   <!-- HERO (sin cambios) -->
   <header class="hero">
-    <!-- Fondo del hero - Puedes cambiar el estilo aquí -->
-    <div class="section-bg section-bg-color"></div>
+    <!-- Fondo del hero con imagen Hero_cursos.jpg -->
+    <div class="section-bg section-bg-image" style="background-image: url('./assets/Imagenes/Hero_cursos.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="section-bg-overlay"></div>
+    </div>
     <div class="wrap">
       <div class="hero-inner">
         <div>
