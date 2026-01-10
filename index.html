@@ -396,7 +396,15 @@
     
     /* Overlay para hero con imagen - muy sutil para que se vea bien la imagen */
     .hero .section-bg-overlay{
-      background: linear-gradient(180deg, rgba(254,251,249,.30), rgba(248,244,240,.40));
+      background: linear-gradient(180deg, rgba(254,251,249,.15), rgba(248,244,240,.20));
+    }
+    
+    /* Asegurar que el contenido del hero tenga buen contraste sobre la imagen */
+    .hero h1,
+    .hero .sub,
+    .hero .kicker,
+    .hero .btn{
+      text-shadow: 0 2px 8px rgba(0,0,0,.15);
     }
 
     /* ===== QUIÉNES SOMOS ===== */
