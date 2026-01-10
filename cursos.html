@@ -72,9 +72,16 @@
       overflow-x: hidden;
     }
 
-    /* Fondo tipo Greeko - Versión más suave y femenina */
-    .bg-image{
+    /* Fondo global - Removido para permitir fondos por sección */
+    /* Si necesitas un fondo global, puedes usar la clase .bg-global en el body */
+    .bg-global{
       position: fixed;
+      inset: 0;
+      z-index: -10;
+      pointer-events: none;
+    }
+    .bg-global .bg-image{
+      position: absolute;
       inset: 0;
       background-image:
         radial-gradient(1200px 750px at 15% 20%, rgba(232,197,202,.08), transparent 70%),
@@ -85,16 +92,14 @@
       background-position: center;
       filter: saturate(0.8) contrast(1.0) brightness(1.2) blur(0.5px);
       transform: scale(1.03);
-      z-index: -2;
       opacity: 0.35;
     }
-    .bg-overlay{
-      position: fixed;
+    .bg-global .bg-overlay{
+      position: absolute;
       inset:0;
       background:
         radial-gradient(1200px 850px at 25% 10%, rgba(254,251,249,.50), transparent 70%),
         linear-gradient(180deg, rgba(254,251,249,.80), rgba(248,244,240,.90) 40%, rgba(248,244,240,.95));
-      z-index: -1;
     }
 
     a{ color: inherit; text-decoration: none; }
@@ -263,6 +268,8 @@
       min-height: calc(78vh - 120px);
       display:flex;
       align-items:center;
+      position: relative;
+      z-index: 1;
     }
     .hero-inner{
       display:flex;
@@ -342,7 +349,47 @@
       color: var(--wine);
     }
 
-    section{ padding: 56px 0; }
+    section{ 
+      padding: 56px 0;
+      position: relative;
+      z-index: 1;
+      /* Permite que cada sección tenga su propio fondo */
+    }
+    
+    /* Estilos para fondos por sección */
+    section .section-bg{
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    /* Ejemplos de fondos para secciones */
+    section.bg-solid{
+      /* Para fondos de color sólido */
+    }
+    section.bg-image{
+      /* Para fondos con imagen */
+    }
+    section.bg-gradient{
+      /* Para fondos con gradiente */
+    }
+    
+    /* Utilidades para fondos personalizados */
+    .section-bg-color{
+      background-color: var(--bg);
+    }
+    .section-bg-image{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .section-bg-overlay{
+      position: absolute;
+      inset: 0;
+      background: rgba(254,251,249,.85);
+    }
 
     /* ===== SECTION HEAD ===== */
     .section-head{
@@ -781,7 +828,9 @@
     .footer{
       padding: 48px 0 64px;
       border-top: 1px solid rgba(232,197,202,.20);
-      background: linear-gradient(180deg, rgba(254,251,249,.60), rgba(248,244,240,.80));
+      position: relative;
+      z-index: 1;
+      /* El fondo ahora se aplica mediante .section-bg */
     }
     .footer-inner{
       display:flex;
@@ -929,8 +978,12 @@
 </head>
 
 <body>
-  <div class="bg-image" aria-hidden="true"></div>
-  <div class="bg-overlay" aria-hidden="true"></div>
+  <!-- Fondo global removido - Cada sección puede tener su propio fondo -->
+  <!-- Si necesitas un fondo global, descomenta esto y agrega class="bg-global" al body -->
+  <!-- <div class="bg-global">
+    <div class="bg-image" aria-hidden="true"></div>
+    <div class="bg-overlay" aria-hidden="true"></div>
+  </div> -->
 
   <!-- NAV -->
   <div class="nav-shell">
@@ -980,6 +1033,8 @@
 
   <!-- HERO (sin cambios) -->
   <header class="hero">
+    <!-- Fondo del hero - Puedes cambiar el estilo aquí -->
+    <div class="section-bg section-bg-color"></div>
     <div class="wrap">
       <div class="hero-inner">
         <div>
@@ -1011,6 +1066,8 @@
 
   <!-- PRICING -->
   <section id="comprar">
+    <!-- Fondo de sección - Puedes cambiar el estilo aquí -->
+    <div class="section-bg section-bg-color"></div>
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -1175,6 +1232,8 @@
 
   <!-- INCLUYE -->
   <section id="incluye">
+    <!-- Fondo de sección - Puedes cambiar el estilo aquí -->
+    <div class="section-bg section-bg-color"></div>
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -1266,6 +1325,8 @@
 
   <!-- FAQ -->
   <section id="faq">
+    <!-- Fondo de sección - Puedes cambiar el estilo aquí -->
+    <div class="section-bg section-bg-color"></div>
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -1317,6 +1378,8 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+    <!-- Fondo del footer - Puedes cambiar el estilo aquí -->
+    <div class="section-bg section-bg-color"></div>
     <div class="wrap">
       <div class="footer-inner">
         <div class="footer-left">
