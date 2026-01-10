@@ -391,6 +391,11 @@
       inset: 0;
       background: rgba(254,251,249,.85);
     }
+    
+    /* Overlay para hero con imagen - más sutil para que se vea la imagen */
+    .hero .section-bg-overlay{
+      background: linear-gradient(180deg, rgba(254,251,249,.60), rgba(248,244,240,.75));
+    }
 
     /* ===== QUIÉNES SOMOS ===== */
     .who-wrap{
@@ -981,8 +986,10 @@
   </div>
 
   <header class="hero">
-    <!-- Fondo del hero - Puedes cambiar el estilo aquí -->
-    <div class="section-bg section-bg-color"></div>
+    <!-- Fondo del hero con imagen Home.jpg -->
+    <div class="section-bg section-bg-image" style="background-image: url('assets/Imagenes/Home.jpg');">
+      <div class="section-bg-overlay"></div>
+    </div>
     <div class="wrap">
       <div class="hero-inner">
         <div>
