@@ -406,17 +406,34 @@
       background: rgba(254,251,249,.85);
     }
     
-    /* Overlay para hero con imagen - muy sutil para que se vea bien la imagen */
+    /* Overlay para hero con imagen - gradiente más oscuro arriba para mejor legibilidad */
     .hero .section-bg-overlay{
-      background: linear-gradient(180deg, rgba(254,251,249,.15), rgba(248,244,240,.20));
+      background: linear-gradient(180deg, rgba(0,0,0,.20) 0%, rgba(254,251,249,.25) 30%, rgba(248,244,240,.30) 60%, rgba(248,244,240,.20) 100%);
     }
     
-    /* Asegurar que el contenido del hero tenga buen contraste sobre la imagen */
+    /* Sombra más fuerte para mejor contraste del texto */
     .hero h1,
     .hero .sub,
     .hero .kicker,
     .hero .btn{
-      text-shadow: 0 2px 8px rgba(0,0,0,.15);
+      text-shadow: 0 3px 12px rgba(0,0,0,.40), 0 1px 4px rgba(0,0,0,.30);
+    }
+    
+    /* Fondo semi-transparente detrás del contenido del hero para mejor legibilidad */
+    .hero-inner > div{
+      background: rgba(254,251,249,.75);
+      padding: 40px 48px;
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+      border: 1px solid rgba(255,255,255,.30);
+    }
+    
+    @media (max-width: 768px){
+      .hero-inner > div{
+        padding: 32px 24px;
+      }
     }
 
     /* ===== STATS (llamativa) ===== */
