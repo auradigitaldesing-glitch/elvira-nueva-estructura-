@@ -721,10 +721,16 @@
     .media{
       position: relative;
       min-height: 320px;
-      background-image: url('./assets/Imagenes/Lineas de consultoria.jpg');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       filter: saturate(0.9) contrast(1.05) brightness(1.05);
+    }
+    
+    /* Imagen específica para la sección de líneas de consultoría */
+    #trust .media{
+      background-image: url('./assets/Imagenes/Lineas de consultoria.jpg');
+      min-height: 400px;
     }
     
     .media::after{
@@ -1228,7 +1234,7 @@
 
       <div class="media-grid">
         <div class="media-card">
-          <div class="media" style="background-image: url('./assets/Imagenes/Lineas de consultoria.jpg');" aria-hidden="true">
+          <div class="media" style="background-image: url('assets/Imagenes/Lineas de consultoria.jpg'); background-size: cover; background-position: center; min-height: 400px;" aria-hidden="true">
           </div>
           <!-- ✅ Aquí ya NO va la franja 3/2/1 -->
         </div>
