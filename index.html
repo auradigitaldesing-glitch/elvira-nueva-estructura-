@@ -397,34 +397,21 @@
       background: rgba(254,251,249,.85);
     }
     
-    /* Overlay para hero con imagen - gradiente más oscuro arriba para mejor legibilidad */
+    /* Overlay para hero con imagen - gradiente suave para mejor legibilidad */
     .hero .section-bg-overlay{
-      background: linear-gradient(180deg, rgba(0,0,0,.20) 0%, rgba(254,251,249,.25) 30%, rgba(248,244,240,.30) 60%, rgba(248,244,240,.20) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,.12) 0%, rgba(254,251,249,.20) 40%, rgba(248,244,240,.25) 100%);
     }
     
-    /* Sombra más fuerte para mejor contraste del texto */
+    /* Sombra suave para mejor contraste del texto */
     .hero h1,
     .hero .sub,
-    .hero .kicker,
+    .hero .kicker{
+      text-shadow: 0 2px 10px rgba(0,0,0,.25), 0 1px 3px rgba(0,0,0,.15);
+    }
+    
+    /* Botones con fondo más sólido para mejor visibilidad */
     .hero .btn{
-      text-shadow: 0 3px 12px rgba(0,0,0,.40), 0 1px 4px rgba(0,0,0,.30);
-    }
-    
-    /* Fondo semi-transparente detrás del contenido del hero para mejor legibilidad */
-    .hero-inner > div{
-      background: rgba(254,251,249,.75);
-      padding: 40px 48px;
-      border-radius: var(--r-lg);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(0,0,0,.08);
-      border: 1px solid rgba(255,255,255,.30);
-    }
-    
-    @media (max-width: 768px){
-      .hero-inner > div{
-        padding: 32px 24px;
-      }
+      box-shadow: 0 4px 15px rgba(0,0,0,.20);
     }
 
     /* ===== QUIÉNES SOMOS ===== */
