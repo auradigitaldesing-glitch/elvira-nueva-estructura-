@@ -727,10 +727,6 @@
       filter: saturate(0.9) contrast(1.05) brightness(1.05);
     }
     
-    /* Ocultar overlay y botón de play en la sección de líneas de consultoría */
-    #trust .media::after{
-      display: none;
-    }
     .media::after{
       content:"";
       position:absolute; inset:0;
@@ -741,7 +737,7 @@
       pointer-events:none;
     }
     
-    /* Ocultar overlay en la sección de líneas de consultoría */
+    /* Ocultar overlay en la sección de líneas de consultoría para que la imagen se vea claramente */
     #trust .media::after{
       display: none;
     }
