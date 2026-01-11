@@ -691,6 +691,55 @@
       gap: 16px;
       margin-top: 18px;
     }
+    /* Cards estilo blog/news con imagen arriba y texto abajo */
+    .glass-card{
+      border-radius: var(--r-lg);
+      border: 1px solid rgba(232,197,202,.20);
+      background: rgba(254,251,249,.85);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .glass-card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(184,90,107,.30);
+      box-shadow: 0 20px 60px rgba(184,90,107,.10), 0 8px 30px rgba(45,125,107,.06);
+    }
+    .glass-card-image{
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .glass-card-content{
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .glass-card h2{
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      color: var(--wine);
+    }
+    .glass-card p{
+      margin: 0;
+      color: rgba(45,45,45,.70);
+      line-height: 1.85;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
     .steps{
       display:grid;
       gap: 12px;
@@ -1099,19 +1148,21 @@
     <div class="section-bg section-bg-color"></div>
     <div class="wrap">
       <div class="two-col" style="margin-top: 18px;">
-        <div class="glass-card">
-          <h2 style="margin: 0 0 12px; font-size: clamp(24px, 3vw, 36px);">Solicita tu programa personalizado</h2>
-          <p style="margin: 0; color: rgba(45,45,45,.70); line-height: 1.85; font-size: 15px;">
-            Diseñamos rutas de formación a la medida, con base en las necesidades y objetivos de tu organización.
-          </p>
-        </div>
+        <article class="glass-card">
+          <div class="glass-card-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=70');"></div>
+          <div class="glass-card-content">
+            <h2>Solicita tu programa personalizado</h2>
+            <p>Diseñamos rutas de formación a la medida, con base en las necesidades y objetivos de tu organización.</p>
+          </div>
+        </article>
 
-        <div class="glass-card">
-          <h2 style="margin: 0 0 12px; font-size: clamp(24px, 3vw, 36px);">También contamos con cursos abiertos al público</h2>
-          <p style="margin: 0; color: rgba(45,45,45,.70); line-height: 1.85; font-size: 15px;">
-            Muy pronto podrás consultar nuestro calendario de próximas fechas.
-          </p>
-        </div>
+        <article class="glass-card">
+          <div class="glass-card-image" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=70');"></div>
+          <div class="glass-card-content">
+            <h2>También contamos con cursos abiertos al público</h2>
+            <p>Muy pronto podrás consultar nuestro calendario de próximas fechas.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
