@@ -591,6 +591,10 @@
       gap: 16px;
       margin-top: 18px;
     }
+    /* Grid de 3 columnas para propuesta de valor */
+    #propuesta .service-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
     .service-card{
       position: relative;
       overflow: hidden;
@@ -887,6 +891,7 @@
       .who-item{ grid-template-columns: 32px 1fr; gap: 12px; }
       .who-icon{ width: 32px; height: 32px; font-size: 14px; }
       .service-grid{ gap: 14px; }
+      #propuesta .service-grid{ grid-template-columns: 1fr; }
       .service-title{ font-size: 20px; }
       .service-text{ font-size: 13px; }
       .chip-row{ gap: 8px; }
@@ -1172,92 +1177,50 @@
 
       <div class="service-grid">
         <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon teal" aria-hidden="true">✓</div>
-                <div class="service-tag"><span class="dot" aria-hidden="true"></span> rigurosidad</div>
-              </div>
-              <h3 class="service-title">Rigurosidad técnica y alineación normativa</h3>
-            </div>
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=70');"></div>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="service-icon teal" aria-hidden="true" style="align-self: flex-start;">✓</div>
+            <h3 class="service-title">Rigurosidad técnica y alineación normativa</h3>
+            <div class="service-tag" style="align-self: flex-start;"><span class="dot" aria-hidden="true"></span> rigurosidad</div>
           </div>
         </article>
 
         <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon wine" aria-hidden="true">✓</div>
-                <div class="service-tag wine"><span class="dot" aria-hidden="true"></span> estrategia</div>
-              </div>
-              <h3 class="service-title">Enfoque estratégico transversal</h3>
-            </div>
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=70');"></div>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="service-icon wine" aria-hidden="true" style="align-self: flex-start;">✓</div>
+            <h3 class="service-title">Enfoque estratégico transversal</h3>
+            <div class="service-tag wine" style="align-self: flex-start;"><span class="dot" aria-hidden="true"></span> estrategia</div>
           </div>
         </article>
 
         <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon teal" aria-hidden="true">✓</div>
-                <div class="service-tag"><span class="dot" aria-hidden="true"></span> implementación</div>
-              </div>
-              <h3 class="service-title">Implementación práctica y contextualizada</h3>
-            </div>
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=70');"></div>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="service-icon teal" aria-hidden="true" style="align-self: flex-start;">✓</div>
+            <h3 class="service-title">Implementación práctica y contextualizada</h3>
+            <div class="service-tag" style="align-self: flex-start;"><span class="dot" aria-hidden="true"></span> implementación</div>
           </div>
         </article>
 
         <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon wine" aria-hidden="true">✓</div>
-                <div class="service-tag wine"><span class="dot" aria-hidden="true"></span> colaboración</div>
-              </div>
-              <h3 class="service-title">Trabajo colaborativo e interdisciplinario</h3>
-            </div>
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=70');"></div>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="service-icon wine" aria-hidden="true" style="align-self: flex-start;">✓</div>
+            <h3 class="service-title">Trabajo colaborativo e interdisciplinario</h3>
+            <div class="service-tag wine" style="align-self: flex-start;"><span class="dot" aria-hidden="true"></span> colaboración</div>
           </div>
         </article>
 
         <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon teal" aria-hidden="true">✓</div>
-                <div class="service-tag"><span class="dot" aria-hidden="true"></span> impacto</div>
-              </div>
-              <h3 class="service-title">Impacto organizacional y comunitario</h3>
-            </div>
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=70');"></div>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="service-icon teal" aria-hidden="true" style="align-self: flex-start;">✓</div>
+            <h3 class="service-title">Impacto organizacional y comunitario</h3>
+            <div class="service-tag" style="align-self: flex-start;"><span class="dot" aria-hidden="true"></span> impacto</div>
           </div>
         </article>
 
         <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon wine" aria-hidden="true">✓</div>
-                <div class="service-tag wine"><span class="dot" aria-hidden="true"></span> pasión</div>
-              </div>
-              <h3 class="service-title">Servicio profesional realizado con pasión y propósito</h3>
-            </div>
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=70');"></div>
-            </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="service-icon wine" aria-hidden="true" style="align-self: flex-start;">✓</div>
+            <h3 class="service-title">Servicio profesional realizado con pasión y propósito</h3>
+            <div class="service-tag wine" style="align-self: flex-start;"><span class="dot" aria-hidden="true"></span> pasión</div>
           </div>
         </article>
       </div>
