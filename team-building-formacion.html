@@ -835,6 +835,93 @@
       gap: 16px;
     }
 
+    /* Layout de dos columnas con imagen */
+    .who-wrap{
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid rgba(232,197,202,.20);
+      box-shadow: var(--shadow-soft);
+      background: rgba(254,251,249,.85);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      margin-top: 18px;
+    }
+    .who-inner{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 0;
+      min-height: 420px;
+    }
+    .who-left{
+      background: rgba(254,251,249,.95);
+      color: var(--ink);
+      padding: 40px 40px 36px;
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+      justify-content: center;
+    }
+    .who-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(232,197,202,.25);
+      background: rgba(232,197,202,.12);
+      color: var(--wine);
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      width: fit-content;
+    }
+    .who-dot{
+      width: 10px;height:10px;border-radius:99px;
+      background: var(--wine);
+      box-shadow: 0 0 0 6px rgba(184,90,107,.15);
+    }
+    .who-title{
+      margin: 0;
+      font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      font-size: clamp(36px, 4.3vw, 60px);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: var(--wine);
+    }
+    .who-text{
+      margin: 0;
+      color: rgba(45,45,45,.70);
+      line-height: 1.85;
+      font-size: 16px;
+      max-width: 68ch;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+    .who-right{
+      position: relative;
+      background: rgba(237,234,229,.60);
+      border-left: 1px solid rgba(15,93,82,.12);
+      display:flex;
+      align-items:stretch;
+      justify-content:stretch;
+    }
+    .who-photo{
+      flex:1;
+      background-size: cover;
+      background-position: center top;
+      filter: saturate(0.9) contrast(1.05) brightness(1.05);
+    }
+    .who-right::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(420px 320px at 85% 20%, rgba(139,46,56,.15), transparent 60%),
+        radial-gradient(520px 380px at 20% 85%, rgba(15,93,82,.12), transparent 62%);
+      pointer-events:none;
+    }
+
     /* Service cards para líneas de consultoría */
     .service-grid{
       display:grid;
@@ -1148,6 +1235,11 @@
       #nuestro-sello .service-grid{ grid-template-columns: 1fr; }
       #experiencias .service-grid{ grid-template-columns: 1fr; }
       #lineas-tematicas .service-grid{ grid-template-columns: 1fr; }
+      .who-inner{ grid-template-columns: 1fr; }
+      .who-left{ padding: 24px 20px; }
+      .who-right{ border-left: none; border-top: 1px solid rgba(2,2,2,.10); min-height: 240px; }
+      .who-title{ font-size: clamp(28px, 6vw, 48px); }
+      .who-text{ font-size: 14px; }
       .service-title{ font-size: 20px; }
       .service-text{ font-size: 13px; }
       .chip-row{ gap: 8px; }
@@ -1395,13 +1487,19 @@
   <section id="cursos-equipos">
     <div class="section-bg section-bg-color"></div>
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="badge"><span class="dot" aria-hidden="true"></span> CURSOS PARA EQUIPOS</div>
-          <div class="section-title">Cursos para equipos y liderazgos</div>
-          <p class="section-desc" style="margin-top: 12px;">
-            Capacitaciones prácticas, claras y alineadas a las necesidades organizacionales.
-          </p>
+      <div class="who-wrap">
+        <div class="who-inner">
+          <div class="who-left">
+            <div class="who-kicker"><span class="who-dot" aria-hidden="true"></span> CURSOS PARA EQUIPOS</div>
+            <h2 class="who-title">Cursos para equipos y liderazgos</h2>
+            <p class="who-text">
+              Capacitaciones prácticas, claras y alineadas a las necesidades organizacionales.
+            </p>
+          </div>
+
+          <div class="who-right" aria-hidden="true">
+            <div class="who-photo" style="background-image: url('./assets/TEAM BUILDING/Cursos para equipos.png');"></div>
+          </div>
         </div>
       </div>
     </div>
